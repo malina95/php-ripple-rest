@@ -224,6 +224,8 @@ class RippleRestAccount {
         var_dump($hash);
 
         $result = RippleRest::post("v1/payments", $hash);
+
+        var_dump($result);
         return $payment->clientResourceId = $result["client_resource_id"];
     }
     
