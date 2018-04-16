@@ -146,6 +146,12 @@ class RippleRestAccount {
         $result = RippleRest::get("v1/accounts/" . $this->address . "/payments/$hash");
         return new RippleRestPayment($result["payment"]);
     }
+
+    public function confirmPayment($address, $id)
+    {
+        $result = RippleRest::get("v1/accounts/" . $address . "/payments/$id");
+        return $result["payment"];
+    }
     
     /**
      * Query `rippled` for possible payment "paths" through the Ripple Network to deliver the given amount to the specified `destination_account`. If the `destination_amount` issuer is not specified, paths will be returned for all of the issuers from whom the `destination_account` accepts the given currency.
