@@ -189,7 +189,7 @@ class RippleRestAccount {
      * @param mixed $destinationAmount [String, RippleRestAmount] destination amount
      * @return RippleRestPayment
      */
-    public function createPayment($destinationAccount, $destinationAmount)
+    public function createPayment($destinationAccount, $destinationAmount, $destinationTag = null)
     {
         if ($destinationAccount instanceof RippleRestAccount)
             $destinationAccount = $destinationAccount->address;
@@ -198,6 +198,9 @@ class RippleRestAccount {
         $payment->sourceAccount = $this->address;
         $payment->destinationAccount = $destinationAccount;
         $payment->destinationAmount = RippleRestAmount::fromString($destinationAmount);
+        if ($destinationTag != null) {
+            $payment->destinationTag = $destinationTag;
+        }
         return $payment;
     }
     
