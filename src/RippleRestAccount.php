@@ -221,6 +221,8 @@ class RippleRestAccount {
         $hash["secret"] = $this->secret;
         $hash["client_resource_id"] = $payment->clientResourceId = RippleRest::createUUID();
 
+        var_dump($hash);
+
         $result = RippleRest::post("v1/payments", $hash);
         return $payment->clientResourceId = $result["client_resource_id"];
     }
