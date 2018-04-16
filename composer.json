@@ -1,15 +1,14 @@
 {
-    "name": "orzfly/php-ripple-rest",
+    "name": "malina95/php-ripple-rest",
     "type": "library",
     "description": "RippleRest client for PHP",
     "keywords": ["ripple", "ripple-rest"],
-    "homepage": "http://github.com/orzfly/php-ripple-rest",
+    "homepage": "http://github.com/malina95/php-ripple-rest",
     "license": "MIT",
     "authors": [
         {
-            "name": "Yeechan Lu",
-            "email": "ripple-rest@orzfly.com",
-            "homepage": "http://orzfly.com",
+            "name": "Vladislav Malinichev",
+            "email": "malinichev.ru@gmail.com",
             "role": "Developer"
         }
     ],
